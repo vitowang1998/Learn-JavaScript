@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>This is an example of JavaScript Button</h1>
+        <p id="paragraph">JS can be used to change the content of HTML.</p>
+
+        <!--We can add multiple javascript pages to a single HTML file if needed.-->
+        <script src="myScript.js"></script>
+
+
+        <button type="button" onclick='document.getElementById("paragraph").innerHTML="Content is Now Changed."'>Change Content</button>
+        <button type="button" onclick='document.getElementById("paragraph").style.fontSize="30px"'>Enlarge the font size</button>
+        <button type="button" onclick='document.getElementById("paragraph").style.display="none"'>Hide the Content</button>
+        <button type="button" onclick='document.getElementById("paragraph").style.display="block"'>Show the Content</button>
+        <button type="button" onclick="changeHTMLContent()">Change HTML by Function</button>
+    
+        <script>
+            // This command should only be used for testing.
+            document.write(1 + 100);
+            console.log("Writing to browser's console")
+        </script>
+        
+        <button type="button" onclick="document.write('Some Content')">Calling "document.write()" after HTML loads will delete all existing HTML data</button>
+        <button type="button" onclick="window.alert('This is a window alert')">Invoke Window Alert</button>
+        <button type="button" onclick="document.getElementById('paragraph').innerHTML=Date()">See Current Time</button>
+        <button type="button" onclick="this.innerHTML=Date()">Change to Current Time</button>
+
+
+        <script>
+            // Variables
+            var a, b;
+            a = 145;
+            b = 136;
+            var c = a + b;
+            console.log(c);
+        </script>
+
+        <script>
+            /*
+            typeof "123" => String
+            typeof {name="ABC", age=100}  => object
+            typeof [123, 456, 789] => object
+            typeof undefined => undefined
+            typeof null => object
+            typeof function myFunction() => function
+
+            var x;
+            typeof x => undefined
+
+
+            null == undefined         // true
+            null === undefined        // false
+            They are same in value, but different in types.
+
+            Comparing two JS objects will always return false
+            */
+
+            var john = {type="student", name="John", age="25"};
+
+            var amy = {
+                type = "student",
+                name = "amy",
+                age = "24",
+
+                getAge: function () {
+                    return this.age;
+                }
+            };
+        </script>
+
+
+    </body>
+</html>
